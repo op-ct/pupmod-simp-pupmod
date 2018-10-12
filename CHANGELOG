@@ -1,3 +1,6 @@
+* Mon Oct 1 2018 Chris Tessmer <chris.tessmer@onyxpoint.com> - 7.8.0-0
+- Manage new option in web-routes.conf to support puppetserver 5 (SERVER-1876)
+
 * Tue Sep 11 2018 Steven Pritchard <steven.pritchard@onyxpoint.com> - 7.7.1-0
 - Unconditionally manages the puppet service
 - Remove the (apparently) broken status logic on the puppet service

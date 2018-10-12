@@ -10,7 +10,8 @@ describe 'pupmod::master' do
     }}}
   end
 
-  puppetserver_versions = ['2.7.0', '5.0.0', '5.1.0']
+  # 5.3.5 = SIMP 6.3.0+
+  puppetserver_versions = ['5.3.5', '5.0.0', '2.7.0']
 
   on_supported_os.each do |os, os_facts|
     puppetserver_versions.each do |puppetserver_version|
@@ -245,6 +246,7 @@ describe 'pupmod::master' do
                 'puppetlabs.services.puppet-admin.puppet-admin-service/puppet-admin-service'    => '/puppet-admin-api'
               }
 
+              # This was tested at 2.5.0, but appears to be 5.1.0
               if puppetserver_version >= '5.1.0'
                 web_router_service_hash['puppetlabs.trapperkeeper.services.metrics.metrics-service/metrics-webservice'] = '/metrics'
               end

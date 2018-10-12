@@ -26,7 +26,7 @@ web-router-service: {
 
   # This controls the mount point for the puppet admin API.
   "puppetlabs.services.puppet-admin.puppet-admin-service/puppet-admin-service": "<%= $admin_api_mountpoint %>"
-<%  if versioncmp($pupmod::master::_server_version, '5.1.0') >= 0 { -%>
+
+  <%# SIMP-4510, SERVER-1876 -%>
   "puppetlabs.trapperkeeper.services.metrics.metrics-service/metrics-webservice": "/metrics"
-<%  } -%>
 }
